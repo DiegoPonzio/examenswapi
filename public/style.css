@@ -1,0 +1,89 @@
+body{
+    background: url("fondo.jfif");
+    background-repeat: repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.txts{
+    color:rgb(85, 44, 100);
+    font-size: 10vw;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#footer {
+    padding: 6em 0 4em 0 ;
+    background-color: #1d242a;
+    text-align: center;
+}
+#footer h1{
+    color: rgb(255, 255, 255);
+    font-size: 1.25em;
+}
+    #footer .icons {
+        font-size: 1.25em;
+    }
+
+        #footer .icons li{
+            color: rgba(255, 255, 255, 0.5);
+        }
+            #footer .icons li:hover {
+                color: #fff;
+            }
+
+            @media screen and (max-width: 480px) {
+
+                #footer .icons li{
+                    border: 0;
+                    display: block;
+                    line-height: 1.65em;
+                    margin: 0;
+                    padding: 0.5em 0;
+                }
+
+            }
+            #footer .icons a{
+                color: rgba(255, 255, 255, 0.5);
+            }
+                #footer .icons a:hover {
+                    color: #fff;
+                }
+    
+                @media screen and (max-width: 480px) {
+    
+                    #footer .icons a{
+                        border: 0;
+                        display: block;
+                        line-height: 1.65em;
+                        margin: 0;
+                        padding: 0.5em 0;
+                    }
+    
+                }
+
+    @media screen and (max-width: 980px) {
+
+        #footer {
+            padding: 4em 3em 2em 3em ;
+        }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+        #footer {
+            padding: 3em 2em 1em 2em ;
+        }
+
+    }

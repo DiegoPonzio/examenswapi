@@ -1,0 +1,128 @@
+.blockInfo{
+    display: inline-flexbox;
+}
+
+.cardp{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: url("./media/fondopla.jpg") center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.cardp::before, .cardp::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(60% + 35px);
+    background-color: #fff;
+    transition: transform .5s .25s ease-in;
+    z-index: -1;
+}
+
+.cardp::before{
+    top: 0;
+    clip-path: polygon(0 0, 100% 45%, 0% 100%);
+    transform: translateY(100%);
+}
+
+.cardp::after{
+    bottom: 0;
+    clip-path: polygon(0 55%, 100% 0%, 100% 100%, 0% 100%);
+    transform: translateY(100%);
+}
+
+.card_content{
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.cardp:hover::before, .cardp:hover:after{
+    transform: translateY(0);
+}
+
+.cardp:hover .card_content {
+    opacity: 1;
+    transition-delay: .75s;
+}
+
+.container2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    letter-spacing: 4px;
+    text-align: center;
+    line-height: 150px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00ff15;
+    box-shadow: 0 0 20px rgba(0, 0, 0, -5);
+}
+
+#linea2{
+    direction: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    transform-origin: left;
+    animation: ani 2s linear infinite;
+    -webkit-animation: ani 2s linear infinite;
+}
+
+#linea2::before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #00ff15;
+    right: -8px;
+    box-shadow: 0 0 20px #00ff15;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes ani{
+    0%{
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(405deg);
+        -webkit-transform: rotate(405deg);
+        -moz-transform: rotate(405deg);
+        -ms-transform: rotate(405deg);
+        -o-transform: rotate(405deg);
+    }
+}

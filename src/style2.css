@@ -1,0 +1,59 @@
+.nameCard{
+    color: #fff;
+}
+
+.blockInfo{
+    display: inline-flexbox;
+}
+
+.cards{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: url("./media/fondonav.jpg") center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.cards::before, .cards::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(60% + 35px);
+    background-color: #fff;
+    transition: transform .5s .25s ease-in;
+    z-index: -1;
+}
+
+.cards::before{
+    top: 0;
+    clip-path: polygon(0 0, 100% 45%, 0% 100%);
+    transform: translateY(100%);
+}
+
+.cards::after{
+    bottom: 0;
+    clip-path: polygon(0 55%, 100% 0%, 100% 100%, 0% 100%);
+    transform: translateY(100%);
+}
+
+.card_content{
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.cards:hover::before, .cards:hover:after{
+    transform: translateY(0);
+}
+
+.cards:hover .card_content {
+    opacity: 1;
+    transition-delay: .75s;
+}
+
+.blockInfo{
+    display: inline-flex;
+}
